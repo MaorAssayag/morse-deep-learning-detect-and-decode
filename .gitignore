@@ -164,3 +164,5 @@ cython_debug/
 Proposal/
 test_outputs/
 runs/
+faster_rnn_outputs/
+faster_rnn_outputs/epoch_541_model.pth
