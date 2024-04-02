@@ -16,7 +16,7 @@
    
 ## Background
 
-Morse code detection methods have evolved from DSP techniques requiring prior signal knowledge to robust deep learning models like YOLO, addressing issues in traditional time-frequency analysis-based approaches. In this project, we build a DNN to detect morse code in a spectrogram, utilizing the latest advances in Deep Learning object detection and classification. This is a challenging task, as real-world data contains pink\white noise, interferences, and distortions. We investigated two architectures (LSTM-RNN, Faster-RCNN). Multiple approaches have been taking on this task in the past, but focused on those architectures and pipeline that reflect as many techniques from the course as possible, aiming for the object-detection-approach. The variance in labeld morse code data that are needed is hard to come by, thus we synthesized new labeled bursts of morse CW signals. We tested our network output with common metrics in communication decoding, such as a variant of CER (Character Error Rate) vs SNR (Signal-to-Noise-Ratio).
+Morse code detection methods have evolved from DSP techniques requiring prior signal knowledge to robust deep learning models like YOLO, addressing issues in traditional time-frequency analysis-based approaches. In this project, we build a DNN to detect morse code in a spectrogram, utilizing the latest advances in Deep Learning object detection and classification. This is a challenging task, as real-world data contains pink\white noise, interferences, and distortions. We investigated two architectures (`LSTM-RNN`, `Faster-RCNN`). Multiple approaches have been taking on this task in the past, but focused on those architectures and pipeline that reflect as many techniques from the course as possible, aiming for the object-detection-approach. The variance in labeld morse code data that are needed is hard to come by, thus we synthesized new labeled bursts of morse CW signals. We tested our network output with common metrics in communication decoding, such as a variant of `CER` (Character Error Rate) vs `SNR` (Signal-to-Noise-Ratio).
 The results demonstrate the effectiveness of these approaches in decoding and detection morse code from spectrograms.
 
 ## Summary
@@ -24,14 +24,14 @@ The results demonstrate the effectiveness of these approaches in decoding and de
     * Implementation in pytorch
     * Digital signal processing from scratch
     * Generating training samples (morse signals -> spectrogram) on-the-fly with various hyperparameters
-    * Morse signals varies in **pitch** (main frequency), **length** (number of chars), **signal amplitude**, noise amplitude (**SNR** [dB] (-10dB, 10dB)), morse **dit\dah length**
-    * Used **TensorBoard** for local training tracking
+    * Morse signals varies in `pitch` (main frequency), `length` (number of chars), `signal amplitude`, noise amplitude (`SNR` [dB] (-10dB, 10dB)), morse `dit\dah` length**
+    * Used `TensorBoard` for local training tracking
     
 * **Part 1: LSTM-RNN morse decoder**
     * input: spectrogram [shape: (dynamic, 21)] + target string, output: string
-    * Model size: 740,395 parameters
+    * Model size: `740,395 parameters`
     * trained on ~50,000,000 morse chars
-    * Average CER (Character Error Rate) <2% on SNR above -5dB
+    * `Average CER (Character Error Rate) <2%` on SNR above -5dB
     * loss function: CTCLoss
         * The Connectionist Temporal Classification loss. Calculates loss between a continuous (unsegmented) time series and a target sequence.
     * Train loss after 4k epoches ~0.15
@@ -42,9 +42,9 @@ The results demonstrate the effectiveness of these approaches in decoding and de
     * Bounding box prediction
     * Trained on ~1,000,000 spectrogram's
     * Model size:
-        * Total number of parameters: 41,299,161
+        * Total number of parameters: `41,299,161`
         * Number of trainable parameters: 41,076,761
-    * Accuracy: IoU-x axis 97%
+    * Accuracy: `IoU-x axis 97%`
     * loss function: [RPN Loss Function](https://towardsdatascience.com/review-faster-r-cnn-object-detection-f5685cb30202), combines:
         * classification loss over 2 classes
         * regression loss of bounding boxes
