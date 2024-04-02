@@ -4,15 +4,20 @@
 <h1 align="center">Morse Code Decoder & Detector with Deep Learning</h1>
 <h2 align="center">Final project for the Technion's EE Deep Learning course (046211)</h2> 
 
-# Table of Contents
-* [Background](#background)
-
+## Table of Contents
+1. [Background](#background)
+2. [Summary](#summary)
+3. [Models Overview](#models-overview)
+4. [Demo](#demo-lstm--resnet)
+5. [Refrences](#refrences)
+6. [Contributers](#contributers)
+   
 # Background
 
 Morse code detection methods have evolved from DSP techniques requiring prior signal knowledge to robust deep learning models like YOLO, addressing issues in traditional time-frequency analysis-based approaches. In this project, we build a DNN to detect morse code in a spectrogram, utilizing the latest advances in Deep Learning object detection and classification. This is a challenging task, as real-world data contains pink\white noise, interferences, and distortions. We investigated two architectures (LSTM-RNN, Faster-RCNN). Multiple approaches have been taking on this task in the past, but focused on those architectures and pipeline that reflect as many techniques from the course as possible, aiming for the object-detection-approach. The variance in labeld morse code data that are needed is hard to come by, thus we synthesized new labeled bursts of morse CW signals. We tested our network output with common metrics in communication decoding, such as a variant of CER (Character Error Rate) vs SNR (Signal-to-Noise-Ratio).
 The results demonstrate the effectiveness of these approaches in decoding and detection morse code from spectrograms.
 
-## Summary
+# Summary
 * **General**
     * Implementation in pytorch
     * Digital signal processing from scratch
@@ -139,7 +144,7 @@ Our focus is to detect the start and end of data in the signal frame. Thus, we f
 |---|
 |![Loss](./assets/fcnn-snr-iuos-x-loss.png)|
 
-## Demo (LSTM + RESNET)
+# Demo (LSTM + RESNET)
 | pitch: 950, wpm: 18, snrDB: 0, amplitude: 154, str: MORSE DL, bbx: (17, 19, 242, 20) |
 |---|
 |![Loss](./assets/output_demo.png)|
@@ -151,7 +156,7 @@ Our focus is to detect the start and end of data in the signal frame. Thus, we f
 | `./models`| Saved `LSTM` checkpoints (small size)|
 | `./assets`| for readme|
 
-### Prerequisites
+## Prerequisites
 |Library         | Version |
 |--------------------|----|
 |`Python`| `3.9.0 (Anaconda3)`|
@@ -167,14 +172,14 @@ Our focus is to detect the start and end of data in the signal frame. Thus, we f
 ### Run The Model
 Everything you need is in the notebook. Head over the demo part (after imports) and checkout the model performance.
 
-## Refrences
+# Refrences
 
 * [Ham Radio Blog by AG1LE](https://ag1le.blogspot.com/2019/02/performance-characteristics-of-ml-morse.html)
 * Ling YOU, Weihao LI, Wenlin ZHANG, Keren WANG. Automatic Decoding Algorithm of Morse Code Based on Deep Neural Network[J]. Journal of Electronics & Information Technology, 2020, 42(11): 2643-2648. doi: 10.11999/JEIT190658. [link](https://jeit.ac.cn/en/article/doi/10.11999/JEIT190658#:~:text=A%20deep%20learning%20method%20is,end%2Dto%2Dend%20training.)
 * Research on Automatic Decoding of Morse Code Based on Deep Learning.” 2019 International Conference on Intelligent Computing, Automation and Systems (ICICAS) (2019): 488-491. [link](https://sci-hub.se/10.1109/icicas48597.2019.00107)
 * Wei, Zhenhua & Li, Zijun & Han, Siming. (2023). YFDM: YOLO for detecting Morse code. Scientific Reports. 13. 10.1038/s41598-023-48030-7. [link](https://www.researchgate.net/publication/375882986_YFDM_YOLO_for_detecting_Morse_code)
 
-## Contributers
+# Contributers
 ### Authors
 *Maor Assayag* [<a href="https://www.linkedin.com/in/maorassayag/">LinkedIn</a>, <a href="https://github.com/MaorAssayag">GitHub</a>] <br>
 B.Sc Computer Engineering, Ben-gurion University, Israel <br>
