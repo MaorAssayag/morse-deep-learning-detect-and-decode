@@ -5,9 +5,9 @@
 <h2 align="center">Final project for the Technion's EE Deep Learning course (046211)</h2> 
 
 # Table of Contents
-* [Background](##background)
+* [Background](#background)
 
-## Background
+# Background
 
 Morse code detection methods have evolved from DSP techniques requiring prior signal knowledge to robust deep learning models like YOLO, addressing issues in traditional time-frequency analysis-based approaches. In this project, we build a DNN to detect morse code in a spectrogram, utilizing the latest advances in Deep Learning object detection and classification. This is a challenging task, as real-world data contains pink\white noise, interferences, and distortions. We investigated two architectures (LSTM-RNN, Faster-RCNN). Multiple approaches have been taking on this task in the past, but focused on those architectures and pipeline that reflect as many techniques from the course as possible, aiming for the object-detection-approach. The variance in labeld morse code data that are needed is hard to come by, thus we synthesized new labeled bursts of morse CW signals. We tested our network output with common metrics in communication decoding, such as a variant of CER (Character Error Rate) vs SNR (Signal-to-Noise-Ratio).
 The results demonstrate the effectiveness of these approaches in decoding and detection morse code from spectrograms.
