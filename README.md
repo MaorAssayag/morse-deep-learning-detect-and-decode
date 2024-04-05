@@ -171,8 +171,8 @@ Our focus is to detect the start and end of data in the signal frame. Thus, we f
 |`tqdm`| `4.66.1`|
 |`tqdm`| `4.66.1`|
 
-### Run The Model
-Everything you need is in the notebook. Head over the demo part (after imports) and checkout the model performance.
+### Run The Models
+Everything you need is in the notebook. Head over to the demo part (after imports) and checkout the models performance.
 
 ## Refrences
 
