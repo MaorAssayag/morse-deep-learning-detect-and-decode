@@ -150,6 +150,7 @@ Our focus is to detect the start and end of data in the signal frame. Thus, we f
 | pitch: 950, wpm: 18, snrDB: 0, amplitude: 154, str: MORSE DL, bbx: (17, 19, 242, 20) |
 |---|
 |![Loss](./assets/output_demo.png)|
+[Youtube Video](https://www.youtube.com/watch?v=uDLtp_Y9Fo4)
 
 ## Files In The Repository
 |File name| Purpsoe|
