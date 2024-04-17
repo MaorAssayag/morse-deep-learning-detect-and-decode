@@ -62,7 +62,7 @@ Before feeding the data into the LSTM, we need to represent the Morse code signa
 
 * **LSTM Architecture** <br>
 The LSTM network is designed to process sequential data, such as the spectrogram representation of Morse code. It consists of a series of interconnected memory cells, which are capable of maintaining and updating their internal state over time. This allows the LSTM to selectively remember or forget information from previous time steps, making it well-suited for tasks that require long-term dependencies.
-Our LSTM architecture typically consists of the following components: <br><br> 1. **Input Layer**: This layer receives the input data, which in our case is the spectrogram of the Morse code signal.<br> 2. 3 More **Dense Layers** <br> 3. Dropuout Layer after most of the Dense Layers <br> 4. **LSTM Layer**: One LSTM layer to process the input sequence <br> 5. **Output Layer**: The final layer produces the predicted output sequence, which is the decoded text.
+Our LSTM architecture consists of the following components: <br><br> 1. **Input Layer**: This layer receives the input data, which in our case is the spectrogram of the Morse code signal.<br> 2. 3 More **Dense Layers** <br> 3. Dropuout Layer after most of the Dense Layers <br> 4. **LSTM Layer**: One LSTM layer to process the input sequence <br> 5. **Output Layer**: The final layer produces the predicted output sequence, which is the decoded text.
 
 * **Training and Decoding** <br>
 During training, the LSTM network is fed with pairs of spectrogram representations and their corresponding text transcriptions. The network learns to map the input spectrograms to the correct text sequences by adjusting its weights and biases through backpropagation and optimization algorithms like stochastic gradient descent.
@@ -150,6 +150,7 @@ Our focus is to detect the start and end of data in the signal frame. Thus, we f
 | pitch: 950, wpm: 18, snrDB: 0, amplitude: 154, str: MORSE DL, bbx: (17, 19, 242, 20) |
 |---|
 |![Loss](./assets/output_demo.png)|
+[Youtube Video](https://www.youtube.com/watch?v=uDLtp_Y9Fo4)
 
 ## Files In The Repository
 |File name| Purpsoe|
@@ -171,8 +172,8 @@ Our focus is to detect the start and end of data in the signal frame. Thus, we f
 |`tqdm`| `4.66.1`|
 |`tqdm`| `4.66.1`|
 
-### Run The Model
-Everything you need is in the notebook. Head over the demo part (after imports) and checkout the model performance.
+### Run The Models
+Everything you need is in the notebook. Head over to the demo part (after imports) and checkout the models performance.
 
 ## Refrences
 
